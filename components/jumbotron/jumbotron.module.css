@@ -1,0 +1,25 @@
+.item {
+  @apply border-b-8 flex-col py-16 px-10 text-white lg:flex-row lg:even:flex-row-reverse;
+  border-color: #222;
+}
+.inner {
+  @apply flex items-center justify-between max-w-6xl m-auto;
+  flex-direction: inherit;
+}
+
+.title {
+  @apply text-4xl font-bold mb-4 lg:text-5xl;
+  line-height: 1.1;
+}
+
+.subtitle {
+  @apply text-lg lg:text-2xl;
+}
+
+.pane {
+  @apply text-center lg:w-1/2 lg:text-left;
+}
+
+.image {
+  @apply max-w-full h-auto;
+}
