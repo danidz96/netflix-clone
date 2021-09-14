@@ -10,7 +10,11 @@ export default function Jumbotron({ children, ...restProps }) {
 }
 
 Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
-  return <div className={s.container}>{children}</div>
+  return (
+    <div className={s.container} {...restProps}>
+      {children}
+    </div>
+  )
 }
 
 Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
