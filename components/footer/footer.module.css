@@ -1,10 +1,9 @@
 .container {
-  max-width: 90%;
-  @apply text-gray-500 mx-auto my-0;
+  @apply text-gray-500 mx-auto my-0 max-w-5xl py-16 px-10;
 }
 
 .top {
-  @apply my-8;
+  @apply mb-8;
 }
 
 .links {
