@@ -8,12 +8,12 @@
 }
 
 .title {
-  @apply text-4xl font-bold mb-4 lg:text-5xl;
+  @apply text-2xl font-bold mb-4 md:text-4xl lg:text-5xl;
   line-height: 1.1;
 }
 
 .subtitle {
-  @apply text-lg lg:text-2xl;
+  @apply text-base md:text-lg lg:text-2xl;
 }
 
 .pane {

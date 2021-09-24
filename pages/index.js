@@ -1,6 +1,10 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Jumbotron from '@components/jumbotron'
 import jumboData from '@fixtures/jumbo'
+import faqsData from '@fixtures/faqs'
+import Footer from '@components/footer'
+import { Accordion } from '@components/accordion'
 
 export default function Home() {
   return (
@@ -25,6 +29,108 @@ export default function Home() {
             </Jumbotron>
           ))}
         </Jumbotron.Container>
+        <Accordion>
+          <Accordion.Title>Frequently Asked Questions</Accordion.Title>
+          <Accordion.Content>
+            {faqsData.map((faq) => (
+              <Accordion.Item key={faq.id}>
+                <Accordion.Header>{faq.header}</Accordion.Header>
+                <Accordion.Body>{faq.body}</Accordion.Body>
+              </Accordion.Item>
+            ))}
+          </Accordion.Content>
+        </Accordion>
+        <Footer>
+          <Footer.Top>Questions? Call 900 822 377</Footer.Top>
+          <Footer.Links>
+            <Footer.Link>
+              <Link href="#">
+                <a>FAQ</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Investor Relations</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Ways to Watch</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Corporate Information</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Help Center</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Jobs</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Terms of Use</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Contact Us</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Account</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Reedem Gift Cards</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Privacy</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Speed Test</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Media Center</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Buy Gift Cards</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Cookies preferences</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Legal Notices</a>
+              </Link>
+            </Footer.Link>
+            <Footer.Link>
+              <Link href="#">
+                <a>Only on Netflix</a>
+              </Link>
+            </Footer.Link>
+          </Footer.Links>
+          <Footer.Country>Netflix Spain</Footer.Country>
+        </Footer>
       </main>
 
       <footer></footer>

@@ -10,7 +10,11 @@ export default function Jumbotron({ children, ...restProps }) {
 }
 
 Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
-  return <div className={s.container}>{children}</div>
+  return (
+    <div className={s.container} {...restProps}>
+      {children}
+    </div>
+  )
 }
 
 Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
@@ -31,6 +35,7 @@ Jumbotron.SubTitle = function JumbotronSubTitle({ children, ...restProps }) {
 
 Jumbotron.Image = function JumbotronImage({ ...restProps }) {
   return (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <Image
       className={s.image}
       width={576}
