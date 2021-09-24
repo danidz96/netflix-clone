@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Jumbotron from '@components/jumbotron'
 import jumboData from '@fixtures/jumbo'
+import faqsData from '@fixtures/faqs'
 import Footer from '@components/footer'
+import { Accordion } from '@components/accordion'
 
 export default function Home() {
   return (
@@ -27,6 +29,17 @@ export default function Home() {
             </Jumbotron>
           ))}
         </Jumbotron.Container>
+        <Accordion>
+          <Accordion.Title>Frequently Asked Questions</Accordion.Title>
+          <Accordion.Content>
+            {faqsData.map((faq) => (
+              <Accordion.Item key={faq.id}>
+                <Accordion.Header>{faq.header}</Accordion.Header>
+                <Accordion.Body>{faq.body}</Accordion.Body>
+              </Accordion.Item>
+            ))}
+          </Accordion.Content>
+        </Accordion>
         <Footer>
           <Footer.Top>Questions? Call 900 822 377</Footer.Top>
           <Footer.Links>
