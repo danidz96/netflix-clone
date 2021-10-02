@@ -7,6 +7,7 @@ module.exports = {
   variants: {
     extend: {
       flexDirection: ['even'],
+      backgroundColor: ['active'],
     },
   },
   plugins: [],

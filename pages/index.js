@@ -5,6 +5,7 @@ import jumboData from '@fixtures/jumbo'
 import faqsData from '@fixtures/faqs'
 import Footer from '@components/footer'
 import { Accordion } from '@components/accordion'
+import OptForm from '@components/opt-form'
 
 export default function Home() {
   return (
@@ -40,6 +41,11 @@ export default function Home() {
             ))}
           </Accordion.Content>
         </Accordion>
+        <OptForm>
+          <OptForm.Title>Ready to watch? Enter your email to create or restart your membership.</OptForm.Title>
+          <OptForm.Input placeholder="Email address" />
+          <OptForm.Button type='submit'>Get Started</OptForm.Button>
+        </OptForm>
         <Footer>
           <Footer.Top>Questions? Call 900 822 377</Footer.Top>
           <Footer.Links>
