@@ -5,7 +5,7 @@ import s from './accordion.module.css'
 
 const ToggleContext = createContext()
 
-export const Accordion = ({ children, ...restProps }) => {
+export default function Accordion({ children, ...restProps }) {
   return (
     <div className={s.container} {...restProps}>
       <div className={s.inner}>{children}</div>
