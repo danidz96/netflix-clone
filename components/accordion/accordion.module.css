@@ -4,13 +4,13 @@
 }
 
 .inner {
-    @apply max-w-3xl mx-auto flex flex-col items-center;
+    @apply max-w-3xl mx-auto flex flex-col items-center space-y-8 md:space-y-10;
 }
 
 .title {
-    @apply text-2xl font-bold mb-6 md:text-4xl lg:text-5xl md:mb-9;
+    @apply text-2xl font-bold md:text-4xl lg:text-5xl;
     line-height: 1.1;
-  }
+}
 
 .content {
     @apply w-full;
@@ -43,3 +43,4 @@
 .closed {
     @apply max-h-0;  
 }
+
