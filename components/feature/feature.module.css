@@ -1,0 +1,13 @@
+.container {
+    @apply relative border-b-8 flex-col items-center text-center py-28 px-10 text-white space-y-6 md:space-y-8 md:py-48 lg:py-56;
+    border-color: #222;
+}
+
+.title {
+    @apply text-2xl font-bold mb-4 md:text-4xl lg:text-5xl;
+    line-height: 1.1;
+}
+  
+.subtitle {
+    @apply text-base md:text-lg lg:text-2xl;
+}

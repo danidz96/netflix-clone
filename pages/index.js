@@ -7,6 +7,7 @@ import Footer from '@components/footer'
 import Accordion from '@components/accordion'
 import OptForm from '@components/opt-form'
 import Header from '@components/header'
+import Feature from '@components/feature'
 
 export default function Home() {
   return (
@@ -27,6 +28,18 @@ export default function Home() {
               </Link>
             </Header.Button>
           </Header.Container>
+          <Feature>
+            <Feature.Title>Unlimited movies, TV shows, and more.</Feature.Title>
+            <Feature.SubTitle>Watch anywhere. Cancel anytime.</Feature.SubTitle>
+            <OptForm>
+              <OptForm.Title>
+                Ready to watch? Enter your email to create or restart your
+                membership.
+              </OptForm.Title>
+              <OptForm.Input placeholder="Email address" />
+              <OptForm.Button type="submit">Get Started</OptForm.Button>
+            </OptForm>
+          </Feature>
           <Jumbotron.Container>
             {jumboData.map((item) => (
               <Jumbotron key={item.id}>
