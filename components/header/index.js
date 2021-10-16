@@ -2,7 +2,7 @@ import Logo from '@components/logo'
 import Link from 'next/link'
 import s from './header.module.css'
 
-export default function Header({ bg = false, children, ...restProps }) {
+export default function Header({ children, ...restProps }) {
   return <div {...restProps}>{children}</div>
 }
 
