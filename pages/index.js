@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Jumbotron from '@components/jumbotron'
 import jumboData from '@fixtures/jumbo'
 import faqsData from '@fixtures/faqs'
 import Footer from '@components/footer'
-import { Accordion } from '@components/accordion'
+import Accordion from '@components/accordion'
+import OptForm from '@components/opt-form'
+import Header from '@components/header'
+import Feature from '@components/feature'
+import HomepageBackground from '@components/homepageBackground'
 
 export default function Home() {
   return (
@@ -16,6 +21,30 @@ export default function Home() {
       </Head>
 
       <main>
+        <HomepageBackground>
+          <Header>
+            <Header.Container>
+              <Header.Logo />
+              <Header.Button>
+                <Link href="/signin">
+                  <a aria-label="Sign in">Sign In</a>
+                </Link>
+              </Header.Button>
+            </Header.Container>
+          </Header>
+          <Feature>
+            <Feature.Title>Unlimited movies, TV shows, and more.</Feature.Title>
+            <Feature.SubTitle>Watch anywhere. Cancel anytime.</Feature.SubTitle>
+            <OptForm>
+              <OptForm.Title>
+                Ready to watch? Enter your email to create or restart your
+                membership.
+              </OptForm.Title>
+              <OptForm.Input placeholder="Email address" />
+              <OptForm.Button type="submit">Get Started</OptForm.Button>
+            </OptForm>
+          </Feature>
+        </HomepageBackground>
         <Jumbotron.Container>
           {jumboData.map((item) => (
             <Jumbotron key={item.id}>
@@ -39,6 +68,14 @@ export default function Home() {
               </Accordion.Item>
             ))}
           </Accordion.Content>
+          <OptForm>
+            <OptForm.Title>
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </OptForm.Title>
+            <OptForm.Input placeholder="Email address" />
+            <OptForm.Button type="submit">Get Started</OptForm.Button>
+          </OptForm>
         </Accordion>
         <Footer>
           <Footer.Top>Questions? Call 900 822 377</Footer.Top>
