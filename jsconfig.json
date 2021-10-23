@@ -4,6 +4,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@fixtures/*": ["fixtures/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"],
     }
   },
 }
