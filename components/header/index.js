@@ -1,5 +1,6 @@
-import Logo from '@components/logo'
 import Link from 'next/link'
+import Button from '@components/button'
+import Logo from '@components/logo'
 import s from './header.module.css'
 
 export default function Header({ children, ...restProps }) {
@@ -26,8 +27,8 @@ Header.Logo = function HeaderLogo({ children, ...restProps }) {
 
 Header.Button = function HeaderButton({ children, ...restProps }) {
   return (
-    <button className={s.button} {...restProps}>
+    <Button className={s.button} {...restProps}>
       {children}
-    </button>
+    </Button>
   )
 }

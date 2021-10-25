@@ -9,7 +9,7 @@
 }
 
 .button {
-    @apply flex items-center text-white text-sm bg-red-600 rounded-sm px-2 py-1 lg:px-4 lg:text-base;
+    @apply text-sm px-2 py-1 lg:px-4 lg:text-base;
 }
 
 @media (min-width: 530px) {
