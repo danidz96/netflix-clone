@@ -2,9 +2,9 @@ import s from './footer.module.css'
 
 export default function Footer({ children, ...restProps }) {
   return (
-    <div className={s.container} {...restProps}>
+    <footer className={s.container} {...restProps}>
       {children}
-    </div>
+    </footer>
   )
 }
 
