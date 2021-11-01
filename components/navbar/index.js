@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Button from '@components/button'
 import Logo from '@components/logo'
-import s from './header.module.css'
+import s from './navbar.module.css'
 
-export default function Header({ children, ...restProps }) {
+export default function Navbar({ children, ...restProps }) {
   return <div {...restProps}>{children}</div>
 }
 
-Header.Container = function HeaderContainer({ children, ...restProps }) {
+Navbar.Container = function NavbarContainer({ children, ...restProps }) {
   return (
     <div className={s.container} {...restProps}>
       {children}
@@ -15,7 +15,7 @@ Header.Container = function HeaderContainer({ children, ...restProps }) {
   )
 }
 
-Header.Logo = function HeaderLogo({ children, ...restProps }) {
+Navbar.Logo = function NavbarLogo({ children, ...restProps }) {
   return (
     <Link href="/">
       <a aria-label="Logo">
@@ -25,7 +25,7 @@ Header.Logo = function HeaderLogo({ children, ...restProps }) {
   )
 }
 
-Header.Button = function HeaderButton({ children, ...restProps }) {
+Navbar.Button = function NavbarButton({ children, ...restProps }) {
   return (
     <Button className={s.button} {...restProps}>
       {children}
