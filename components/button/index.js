@@ -15,6 +15,7 @@ export default function Button({
       [s.primary]: variant === 'primary',
       [s.secondary]: variant === 'secondary',
       [s.tertiary]: variant === 'tertiary',
+      [s.disabled]: disabled,
     },
     className
   )

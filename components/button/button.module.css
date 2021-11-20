@@ -10,5 +10,9 @@
 }
 
 .tertiary {
-    @apply bg-gray-500 bg-opacity-80 hover:bg-opacity-40
+    @apply bg-gray-500 bg-opacity-80 hover:bg-opacity-40;
+}
+
+.disabled {
+    @apply opacity-40 cursor-not-allowed;
 }
