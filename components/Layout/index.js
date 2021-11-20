@@ -1,10 +1,21 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import { useRouter } from 'next/router'
 import Navbar from '@components/navbar'
 import Footer from '@components/footer'
+import { useUser } from '@hooks/useUser'
 
 export default function Layout({ children }) {
+  const { user, signOut } = useUser()
+  const router = useRouter()
+
+  const handleSignOut = () => {
+    signOut().then(() => {
+      router.replace('/')
+    })
+  }
+
   return (
     <>
       <Head>
@@ -16,9 +27,15 @@ export default function Layout({ children }) {
         <Navbar.Container>
           <Navbar.Logo />
           <Navbar.Button>
-            <Link href="/signin">
-              <a aria-label="Sign in">Sign In</a>
-            </Link>
+            {user ? (
+              <Link href="#">
+                <a onClick={handleSignOut}>Sign out</a>
+              </Link>
+            ) : (
+              <Link href="/signin">
+                <a>Sign in</a>
+              </Link>
+            )}
           </Navbar.Button>
         </Navbar.Container>
       </Navbar>
