@@ -1,5 +1,6 @@
 .root {
-    @apply text-white py-2 px-4 rounded-sm;
+    @apply text-white py-2 px-4;
+    border-radius: 3px;
 }
 
 .primary {
