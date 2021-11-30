@@ -26,17 +26,20 @@ export default function Layout({ children }) {
       <Navbar>
         <Navbar.Container>
           <Navbar.Logo />
-          <Navbar.Button>
-            {user ? (
-              <Link href="#">
+
+          {user ? (
+            <Link href="#" passHref>
+              <Navbar.Button>
                 <a onClick={handleSignOut}>Sign out</a>
-              </Link>
-            ) : (
-              <Link href="/signin">
+              </Navbar.Button>
+            </Link>
+          ) : (
+            <Link href="/signin" passHref>
+              <Navbar.Button>
                 <a>Sign in</a>
-              </Link>
-            )}
-          </Navbar.Button>
+              </Navbar.Button>
+            </Link>
+          )}
         </Navbar.Container>
       </Navbar>
       <main id="skip" className="-mt-16">
