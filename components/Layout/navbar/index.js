@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Button from '@components/button'
-import Logo from '@components/logo'
+import Button from '@components/layout/button'
+import Logo from '@components/layout/logo'
 import s from './navbar.module.css'
 
 export default function Navbar({ children, ...restProps }) {

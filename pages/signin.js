@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Form from '@components/form'
-import HomepageBackground from '@components/homepageBackground'
+import Form from '@components/home/form'
+import HomepageBackground from '@components/home/homepageBackground'
 import { useUser } from '@hooks/useUser'
 import { updateUserName } from '@utils/supabase-client'
 
