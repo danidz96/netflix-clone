@@ -15,9 +15,9 @@ Navbar.Container = function NavbarContainer({ children, ...restProps }) {
   )
 }
 
-Navbar.Logo = function NavbarLogo({ children, ...restProps }) {
+Navbar.Logo = function NavbarLogo({ children, user, ...restProps }) {
   return (
-    <Link href="/">
+    <Link href={user ? '/browse' : '/'}>
       <a aria-label="Logo">
         <Logo className={s.logo} {...restProps} />
       </a>
