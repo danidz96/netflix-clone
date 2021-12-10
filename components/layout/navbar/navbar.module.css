@@ -22,6 +22,10 @@
     @apply cursor-pointer hover:text-gray-300;
 }
 
+.profile {
+    @apply rounded;
+}
+
 @media (min-width: 530px) {
     .logo{ 
         width: 6.76rem;

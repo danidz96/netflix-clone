@@ -25,6 +25,7 @@ export default function HeaderContainer() {
               <Navbar.Link>Movies</Navbar.Link>
             </Navbar.Links>
             <Search />
+            <Navbar.Profile user={user} />
             <Link href="#" passHref>
               <Navbar.Button>
                 <a onClick={handleSignOut}>Sign out</a>

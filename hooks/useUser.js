@@ -37,6 +37,22 @@ export const UserContextProvider = (props) => {
     }
   }, [])
 
+  useEffect(() => {
+    if (user) {
+      const subscription = supabase
+        .from(`profiles:id=eq.${user.id}`)
+        .on('UPDATE', (payload) => {
+          setUser({ ...user, ...payload.new })
+          console.log('user updated', payload)
+        })
+        .subscribe()
+
+      return () => {
+        supabase.removeSubscription(subscription)
+      }
+    }
+  }, [user])
+
   const value = {
     user,
     signIn: (options) => supabase.auth.signIn(options),
