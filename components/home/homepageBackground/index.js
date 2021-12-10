@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import bgImage from '../../public/images/home/home-bg.jpg'
+import bgImage from '../../../public/images/home/home-bg.jpg'
 import s from './homepageBackground.module.css'
 
 export default function HomepageBackground({ children, ...restProps }) {

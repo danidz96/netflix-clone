@@ -1,12 +1,24 @@
-import Jumbotron from '@components/jumbotron'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useUser } from '@hooks/useUser'
+import Jumbotron from '@components/home/jumbotron'
 import jumboData from '@fixtures/jumbo'
 import faqsData from '@fixtures/faqs'
-import Accordion from '@components/accordion'
-import OptForm from '@components/opt-form'
-import Feature from '@components/feature'
-import HomepageBackground from '@components/homepageBackground'
+import Accordion from '@components/home/accordion'
+import OptForm from '@components/home/opt-form'
+import Feature from '@components/home/feature'
+import HomepageBackground from '@components/home/homepageBackground'
 
 export default function Home() {
+  const router = useRouter()
+  const { user } = useUser()
+
+  useEffect(() => {
+    if (user) {
+      router.replace('/browse')
+    }
+  }, [user, router])
+
   return (
     <>
       <HomepageBackground>

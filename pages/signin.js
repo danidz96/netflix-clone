@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Form from '@components/form'
-import HomepageBackground from '@components/homepageBackground'
+import Form from '@components/home/form'
+import HomepageBackground from '@components/home/homepageBackground'
 import { useUser } from '@hooks/useUser'
 import { updateUserName } from '@utils/supabase-client'
 
@@ -42,7 +42,7 @@ export default function Signup() {
     if (user) {
       router.replace('/browse')
     }
-  }, [user])
+  }, [user, router])
 
   return (
     <HomepageBackground>
@@ -73,7 +73,7 @@ export default function Signup() {
               Sign In
             </Form.Button>
             <span className="pt-1 text-center text-sm text-white">
-              <span>Don't have an account?</span>
+              <span>Don&apos;t have an account?</span>
               {` `}
               <Link href="/signup">
                 <a className="font-bold hover:underline cursor-pointer">

@@ -1,0 +1,21 @@
+.root {
+    @apply hidden xs:flex mr-6 relative items-center;
+}
+
+.icon {
+    @apply text-white w-5 h-5 cursor-pointer absolute z-10 left-6;
+    transition: ease left 0.5s;
+}
+
+.input {
+    @apply outline-none border border-white text-white bg-transparent px-2 pl-8 py-1 w-0 opacity-0;
+    transition: ease width 0.5s, ease opacity 0.5s;
+}
+
+.inputActive {
+    @apply opacity-100 w-32 md:w-64;
+}
+
+.iconActive {
+    @apply left-2;
+}

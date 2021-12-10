@@ -1,5 +1,5 @@
-import Button from '@components/button'
-import Input from '@components/input'
+import Button from '@components/layout/button'
+import Input from '@components/home/input'
 import s from './form.module.css'
 
 export default function Form({ onSubmit, children, ...restProps }) {
