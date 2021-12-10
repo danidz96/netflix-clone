@@ -4,17 +4,31 @@ import { supabase } from '@utils/supabase-client'
 export const UserContext = createContext()
 
 export const UserContextProvider = (props) => {
-  const [session, setSession] = useState(null)
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    const session = supabase.auth.session()
-    setSession(session)
-    setUser(session?.user ?? null)
+    const getUserProfile = async () => {
+      const sessionUser = supabase.auth.user()
+
+      if (sessionUser) {
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('*')
+          .eq('id', sessionUser.id)
+          .single()
+
+        setUser({
+          ...sessionUser,
+          ...profile,
+        })
+      }
+    }
+
+    getUserProfile()
+
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        setSession(session)
-        setUser(session?.user ?? null)
+        getUserProfile()
       }
     )
 
@@ -24,11 +38,11 @@ export const UserContextProvider = (props) => {
   }, [])
 
   const value = {
-    session,
     user,
     signIn: (options) => supabase.auth.signIn(options),
     signUp: (options) => supabase.auth.signUp(options),
     signOut: () => {
+      setUser(null)
       return supabase.auth.signOut()
     },
   }
