@@ -10,7 +10,7 @@ export default function Browse() {
     if (!user) {
       router.replace('/signin')
     }
-  }, [user])
+  }, [user, router])
 
   return <>Browse page</>
 }

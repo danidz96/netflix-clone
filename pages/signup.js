@@ -43,7 +43,7 @@ export default function Signup() {
     if (user) {
       router.replace('/browse')
     }
-  }, [user])
+  }, [user, router])
 
   return (
     <HomepageBackground>

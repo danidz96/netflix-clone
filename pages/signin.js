@@ -42,7 +42,7 @@ export default function Signup() {
     if (user) {
       router.replace('/browse')
     }
-  }, [user])
+  }, [user, router])
 
   return (
     <HomepageBackground>
@@ -73,7 +73,7 @@ export default function Signup() {
               Sign In
             </Form.Button>
             <span className="pt-1 text-center text-sm text-white">
-              <span>Don't have an account?</span>
+              <span>Don&apos;t have an account?</span>
               {` `}
               <Link href="/signup">
                 <a className="font-bold hover:underline cursor-pointer">

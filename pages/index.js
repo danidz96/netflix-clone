@@ -17,7 +17,7 @@ export default function Home() {
     if (user) {
       router.replace('/browse')
     }
-  }, [user])
+  }, [user, router])
 
   return (
     <>
