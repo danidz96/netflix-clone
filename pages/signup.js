@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Form from '@components/home/form'
 import HomepageBackground from '@components/home/homepageBackground'
 import { useUser } from '@hooks/useUser'
-import { updateUserName } from '@utils/supabase-client'
+import { createProfile } from '@helpers/profile'
 
 export default function Signup() {
   const [email, setEmail] = useState('')
@@ -29,7 +29,7 @@ export default function Signup() {
       setMessage({ type: 'error', content: error.message })
     } else {
       if (createdUser) {
-        await updateUserName(createdUser, name)
+        await createProfile(createdUser, name)
         setMessage({
           type: 'note',
           content: 'Check your email for the confirmation link.',
