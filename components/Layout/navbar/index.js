@@ -32,3 +32,19 @@ Navbar.Button = function NavbarButton({ children, ...restProps }) {
     </Button>
   )
 }
+
+Navbar.Links = function NavbarLinks({ children, ...restProps }) {
+  return (
+    <ul className={s.links} {...restProps}>
+      {children}
+    </ul>
+  )
+}
+
+Navbar.Link = function NavbarLink({ children, ...restProps }) {
+  return (
+    <li className={s.link} {...restProps}>
+      {children}
+    </li>
+  )
+}
