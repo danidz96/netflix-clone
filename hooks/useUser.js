@@ -5,6 +5,7 @@ export const UserContext = createContext()
 
 export const UserContextProvider = (props) => {
   const [user, setUser] = useState(null)
+  const [selectedProfile, setSelectedProfile] = useState(null)
 
   useEffect(() => {
     const getUserProfile = async () => {
@@ -55,6 +56,10 @@ export const UserContextProvider = (props) => {
 
   const value = {
     user,
+    selectedProfile,
+    setSelectedProfile: (profile) => {
+      setSelectedProfile(profile)
+    },
     signIn: (options) => supabase.auth.signIn(options),
     signUp: (options) => supabase.auth.signUp(options),
     signOut: () => {

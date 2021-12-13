@@ -50,12 +50,12 @@ Navbar.Link = function NavbarLink({ children, ...restProps }) {
   )
 }
 
-Navbar.Profile = function NavbarProfile({ children, user, ...restProps }) {
-  if (!user?.avatar_url) return null
+Navbar.Profile = function NavbarProfile({ children, profile, ...restProps }) {
+  if (!profile?.avatar_url) return null
   return (
     <Image
-      src={user?.avatar_url}
-      alt={`${user?.full_name} avatar image`}
+      src={profile?.avatar_url}
+      alt={`${profile?.full_name} avatar image`}
       width="32px"
       height="32px"
       className={s.profile}

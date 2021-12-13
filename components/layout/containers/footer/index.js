@@ -1,7 +1,12 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Footer from '@components/layout/footer'
 
 export default function FooterContainer() {
+  const router = useRouter()
+
+  if (router.pathname === '/profiles/manage') return null
+
   return (
     <Footer>
       <Footer.Top>Questions? Call 900 822 377</Footer.Top>
