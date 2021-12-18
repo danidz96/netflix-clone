@@ -1,24 +1,24 @@
 .root {
-    @apply h-screen flex flex-col items-center justify-center gap-6;
-    margin-top: -68px;
+  @apply h-screen flex flex-col items-center justify-center gap-6;
+  margin-top: -68px;
 }
 
 .title {
-    @apply text-4xl;
+  @apply text-4xl;
 }
 
 .list {
-    @apply flex justify-center gap-6;
+  @apply flex justify-center gap-6;
 }
 
 .user {
-    @apply flex flex-col items-center gap-2 cursor-pointer;
+  @apply flex flex-col items-center gap-2 cursor-pointer;
 }
 
 .picture {
-    @apply rounded-md
+  @apply rounded-md;
 }
 
 .name {
-    @apply text-gray-400
+  @apply text-gray-400;
 }

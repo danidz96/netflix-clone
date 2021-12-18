@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Button from '@components/layout/button'
 import Logo from '@components/layout/logo'
+import UserMenu from '@components/layout/userMenu'
 import s from './navbar.module.css'
 
 export default function Navbar({ children, ...restProps }) {
@@ -50,18 +50,6 @@ Navbar.Link = function NavbarLink({ children, ...restProps }) {
   )
 }
 
-Navbar.Profile = function NavbarProfile({ children, profile, ...restProps }) {
-  if (!profile?.avatar_url) return null
-  return (
-    <Image
-      src={profile?.avatar_url}
-      alt={`${profile?.full_name} avatar image`}
-      width="32px"
-      height="32px"
-      className={s.profile}
-      {...restProps}
-    >
-      {children}
-    </Image>
-  )
+Navbar.Profile = function NavbarProfile({ children, ...restProps }) {
+  return <UserMenu />
 }

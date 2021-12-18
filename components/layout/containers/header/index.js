@@ -5,7 +5,7 @@ import Search from '@components/layout/search'
 import { useUser } from '@hooks/useUser'
 
 export default function HeaderContainer() {
-  const { user, selectedProfile, signOut } = useUser()
+  const { user, signOut } = useUser()
   const router = useRouter()
 
   const handleSignOut = () => {
@@ -26,12 +26,12 @@ export default function HeaderContainer() {
                 <Navbar.Link>Movies</Navbar.Link>
               </Navbar.Links>
               <Search />
-              <Navbar.Profile profile={selectedProfile} />
-              <Link href="#" passHref>
+              <Navbar.Profile />
+              {/* <Link href="#" passHref>
                 <Navbar.Button>
                   <a onClick={handleSignOut}>Sign out</a>
                 </Navbar.Button>
-              </Link>
+              </Link> */}
             </>
           ) : (
             <Link href="/signin" passHref>
