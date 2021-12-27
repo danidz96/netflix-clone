@@ -5,7 +5,7 @@ import Search from '@components/layout/search'
 import { useUser } from '@hooks/useUser'
 
 export default function HeaderContainer() {
-  const { user, signOut } = useUser()
+  const { user, signOut, selectedProfile } = useUser()
   const router = useRouter()
 
   const handleSignOut = () => {
@@ -14,11 +14,14 @@ export default function HeaderContainer() {
     })
   }
 
+  const showNavbarLinks =
+    router.pathname === '/browse' ? (selectedProfile ? true : false) : true
+
   return (
     <Navbar>
       <Navbar.Container>
         <Navbar.Logo user={user} />
-        {router.pathname !== '/profiles/manage' &&
+        {showNavbarLinks &&
           (user ? (
             <>
               <Navbar.Links>
@@ -27,11 +30,6 @@ export default function HeaderContainer() {
               </Navbar.Links>
               <Search />
               <Navbar.Profile />
-              {/* <Link href="#" passHref>
-                <Navbar.Button>
-                  <a onClick={handleSignOut}>Sign out</a>
-                </Navbar.Button>
-              </Link> */}
             </>
           ) : (
             <Link href="/signin" passHref>
