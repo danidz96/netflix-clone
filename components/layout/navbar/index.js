@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Button from '@components/layout/button'
 import Logo from '@components/layout/logo'
+import UserMenu from '@components/layout/userMenu'
 import s from './navbar.module.css'
 
 export default function Navbar({ children, ...restProps }) {
@@ -47,4 +48,8 @@ Navbar.Link = function NavbarLink({ children, ...restProps }) {
       {children}
     </li>
   )
+}
+
+Navbar.Profile = function NavbarProfile({ children, ...restProps }) {
+  return <UserMenu />
 }

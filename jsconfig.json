@@ -6,6 +6,7 @@
       "@fixtures/*": ["fixtures/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
+      "@helpers/*": ["helpers/*"],
     }
   },
 }
