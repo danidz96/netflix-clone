@@ -22,7 +22,8 @@ export default function Browse() {
     }, 2000)
   }, [selectedProfile?.full_name])
 
-  if (isLoading && selectedProfile?.full_name) return <Loading />
+  if (isLoading && selectedProfile?.full_name)
+    return <Loading avatar={selectedProfile.avatar_url} />
 
   if (!selectedProfile) return <SelectProfileContainer />
 
