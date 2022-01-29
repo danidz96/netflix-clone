@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useUser } from '@hooks/useUser'
 import SelectProfileContainer from '@components/browse/containers/selectProfile'
 import Loading from '@components/browse/loading'
+import Lolomo from '@components/browse/lolomo'
 
 export default function Browse() {
   const router = useRouter()
@@ -27,5 +28,9 @@ export default function Browse() {
 
   if (!selectedProfile) return <SelectProfileContainer />
 
-  return <>Browse</>
+  return (
+    <>
+      <Lolomo category={'TVShows'} />
+    </>
+  )
 }

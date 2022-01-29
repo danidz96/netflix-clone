@@ -1,0 +1,6 @@
+.container {
+  color: red;
+  &:hover {
+    color: blue;
+  }
+}
