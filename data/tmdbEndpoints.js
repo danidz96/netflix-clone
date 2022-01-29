@@ -12,8 +12,8 @@ export const TMDB = {
         endpoint: `/trending/tv/day?api_key=${API_KEY}&page=_pageNumber`,
       },
       {
-        title: 'War Politics',
-        endpoint: `/discover/tv?api_key=${API_KEY}&with_genres=10768&with_watch_providers=8`,
+        title: 'Sci-Fi & Fantasy',
+        endpoint: `/discover/tv?api_key=${API_KEY}&with_genres=10765&with_watch_providers=8`,
       },
       {
         title: 'Netflix Original',
@@ -21,8 +21,8 @@ export const TMDB = {
         size: 'large',
       },
       {
-        title: 'Sci-Fi & Fantasy',
-        endpoint: `/discover/tv?api_key=${API_KEY}&with_genres=10765&with_watch_providers=8`,
+        title: 'War Politics',
+        endpoint: `/discover/tv?api_key=${API_KEY}&with_genres=10768&with_watch_providers=8`,
       },
       {
         title: 'Documentary',

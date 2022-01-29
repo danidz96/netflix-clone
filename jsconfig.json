@@ -7,6 +7,7 @@
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
       "@helpers/*": ["helpers/*"],
+      "@data/*": ["data/*"],
     }
   },
 }
