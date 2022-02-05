@@ -1,0 +1,55 @@
+.container {
+  @apply relative;
+}
+
+.titleWrapper {
+  @apply mb-4 py-0 px-[4%] text-[1.4vw] leading-[1.25vw] font-bold text-left cursor-pointer;
+}
+
+.showMore {
+  @apply text-[0.9vw] leading-[0.8vw] inline-flex items-center whitespace-nowrap opacity-0 mx-[1vw] cursor-pointer transition-opacity duration-300 ease-in-out;
+}
+.showMoreIcon {
+  @apply w-3;
+}
+
+.sliderArrow {
+  @apply absolute top-0 flex items-center justify-center text-white h-full z-10 w-[4%] hover:cursor-pointer;
+}
+
+.left {
+  @apply left-0;
+}
+
+.right {
+  @apply right-0;
+}
+
+.swiperWrapper [class^='swiper-pagination'] {
+  top: -25px !important;
+  right: 4.5%;
+  left: initial !important;
+  bottom: initial !important;
+  width: auto !important;
+  opacity: 1;
+  z-index: 1;
+  transform: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.swiperWrapper [class^='swiper-pagination-bullet'] {
+  width: 12px !important;
+  height: 4px !important;
+  display: inline-block;
+  margin: 0 !important;
+  margin-left: 2px !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  background-color: #4d4d4d !important;
+  transition: all 0.2s ease-in-out;
+}
+.swiperWrapper
+  [class='swiper-pagination-bullet swiper-pagination-bullet-active'] {
+  background-color: #aaa !important;
+  height: 5px;
+}
