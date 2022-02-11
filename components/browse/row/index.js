@@ -73,7 +73,7 @@ export default function Row({ section, category }) {
           </div>
         </Link>
       </h2>
-      <div>
+      <div className={s.swiperContainer}>
         <div className={clsx(s.sliderArrow, s.left)} ref={navigationPrevRef}>
           <ChevronLeftIcon />
         </div>

@@ -1,6 +1,9 @@
 .container {
   @apply relative;
 }
+.swiperContainer {
+  @apply relative;
+}
 
 .titleWrapper {
   @apply mb-4 py-0 px-[4%] text-[1.4vw] leading-[1.25vw] font-bold text-left cursor-pointer;
@@ -52,4 +55,9 @@
   [class='swiper-pagination-bullet swiper-pagination-bullet-active'] {
   background-color: #aaa !important;
   height: 5px;
+}
+
+.container [class~='swiper'] {
+  overflow: initial !important;
+  padding: 0 4%;
 }
