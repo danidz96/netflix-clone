@@ -56,6 +56,11 @@
   background-color: #aaa !important;
   height: 5px;
 }
+.swiperWrapper [class~='swiper-slide'] {
+  &:hover {
+    z-index: 1;
+  }
+}
 
 .container [class~='swiper'] {
   overflow: initial !important;
